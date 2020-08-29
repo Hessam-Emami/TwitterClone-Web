@@ -20,7 +20,7 @@ body {
 .main-page {
   width: 100%;
   height: 100vh;
-  display: grid;
+  display: none;
   grid-template-rows: 1fr min-content;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -167,3 +167,53 @@ body {
 }
 /* end of Footer */
 /* end of main page */
+
+/* login page */
+.login-page {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
+  grid-template-rows: min-content min-content 1fr;
+  row-gap: 1.5rem;
+}
+/* login nav */
+.login-page-nav {
+  grid-column: 1/-1;
+  background-color: #fff;
+  grid-row: 1/2;
+  padding: 2.5rem 0;
+}
+.login-page-nav ul {
+  display: flex;
+  font-size: 1.6rem;
+  list-style: none;
+  width: 100rem;
+  margin: auto;
+  align-items: flex-end;
+}
+.login-page-nav li {
+  padding: 0 1rem;
+}
+.login-page-nav li:last-child{
+  margin-left: auto;
+}
+.login-page-nav a{
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #555;
+}
+.login-page-nav i {
+  color: #1aa1a5;
+  font-size: 2rem;
+}
+/* end of login nav */
+/* login content */
+.login-page-content {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100rem;
+  background-color: #fff;
+}
+/* end of login content */
+/* end of login page */
