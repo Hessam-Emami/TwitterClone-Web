@@ -3,12 +3,11 @@
 * {
     margin: 0;
     padding: 0;
-    outline: none;
     font-family: "Josefin Sans", sans-serif;
+    outline: none;
 }
 
 html {
-    /* 1rem = 10px */
     font-size: 62.5%;
 }
 
@@ -26,16 +25,16 @@ body {
     width: 100%;
     height: 100vh;
     display: none;
-    grid-template-rows: 1fr min-content;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr min-content;
 }
 
 
 /* left */
 
 .left {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     background-color: #1aa1f5;
     display: flex;
     justify-content: center;
@@ -46,7 +45,7 @@ body {
     display: flex;
     align-items: center;
     margin: 4rem;
-    color: white;
+    color: #fff;
 }
 
 .left-content i {
@@ -62,11 +61,11 @@ body {
 /* end of left */
 
 
-/* Right */
+/* right */
 
 .right {
-    grid-column: 2/-1;
-    grid-row: 1/2;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
     position: relative;
 }
 
@@ -74,6 +73,10 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+}
+
+.right-content-form div {
+    position: relative;
 }
 
 .right-content-form input {
@@ -90,11 +93,6 @@ body {
 
 .right-content-form input:focus {
     background-color: #d9ebf7;
-    outline: none;
-}
-
-.right-content-form div {
-    position: relative;
 }
 
 .right-content-form label {
@@ -112,7 +110,7 @@ body {
     color: #1aa1f5;
     border: 0.1rem solid #1aa1f5;
     border-radius: 3rem;
-    font-size-adjust: 1.4rem;
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -126,10 +124,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 40%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 .middle-content i {
@@ -161,7 +159,7 @@ body {
 
 .sign-up {
     background-color: #1aa1f5;
-    color: white;
+    color: #fff;
 }
 
 .sign-up:hover {
@@ -169,7 +167,7 @@ body {
 }
 
 .log-in {
-    background-color: white;
+    background-color: #fff;
 }
 
 .log-in:hover {
@@ -177,14 +175,14 @@ body {
 }
 
 
-/* End of Right */
+/* end of right */
 
 
-/* Footer */
+/* footer */
 
 .main-page-footer {
-    grid-column: 1/-1;
-    grid-row: 2/-1;
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
     background-color: #f5f4f4;
     padding: 1.5rem;
     border-top: 0.1rem solid #ddd;
@@ -205,7 +203,7 @@ body {
 }
 
 
-/* end of Footer */
+/* end of footer */
 
 
 /* end of main page */
@@ -218,8 +216,8 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
-    grid-template-rows: min-content min-content 1fr;
-    row-gap: 1.5rem;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 1.5rem;
 }
 
 
@@ -242,7 +240,7 @@ body {
 }
 
 .login-page-nav li {
-    padding: 0 1rem;
+    margin: 0 1rem;
     position: relative;
 }
 
@@ -280,24 +278,65 @@ body {
 .login-page-nav i {
     color: #1aa1f5;
     font-size: 2rem;
-    margin-right: .5rem;
 }
 
 
-/* end of login nav */
+/* end of login page nav */
 
 
-/* login content */
+/* login */
 
-.login-page-content {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    width: 100rem;
+.login {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     background-color: #fff;
+    width: 100rem;
+    display: grid;
+    grid-template-columns: 10rem 8fr;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.login-content {
+    grid-column: 2 / -1;
+    grid-row: 1 /2;
+    padding: 5rem 0 1rem 0;
+}
+
+.login-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input:not(.login-form-checkbox) {
+    width: 30rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.login-form input:focus {
+    background-color: #d9ebf7;
+}
+
+.login-footer {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+    background-color: #edf3f7;
+    padding-left: 10rem;
 }
 
 
-/* end of login content */
+/* end of login */
 
 
 /* end of login page */
